@@ -15,6 +15,6 @@ class HomeController < ApplicationController
   end
 
   def sample
-    
+    @hello = "World"
   end
 end
