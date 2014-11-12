@@ -1,3 +1,123 @@
+<header id="ccr-header">
+  <section id="ccr-nav-top" class="fullwidth">
+    <div class="">
+      <div class="container">
+        <nav class="top-menu">
+          <ul class="left-top-menu">
+            <li><a href="home/index.html">Trang chủ</a></li>
+            <li><a href="#">Sơ đồ web</a></li>
+            <li><a href="contact.html"><%= @hello %></a></li>
+          </ul><!-- /.left-top-menu -->
+
+          <ul class="right-top-menu pull-right">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Subscribe</a></li>
+            <li>
+              <form class="form-inline" role="form" action="#">
+                <input type="search" placeholder="Search here..." required>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+          </ul> <!--  /.right-top-menu -->
+        </nav> <!-- /.top-menu -->
+      </div>
+    </div>
+  </section> <!--  /#ccr-nav-top  -->
+
+  <section id="ccr-nav-main">
+    <nav class="main-menu">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-main">
+            <i class="fa fa-bars"></i>
+          </button> <!-- /.navbar-toggle -->
+        </div> <!-- / .navbar-header -->
+
+        <div class="collapse navbar-collapse ccr-nav-main">
+          <ul class="nav navbar-nav">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#">Blog <i class="fa fa-caret-down"></i></a>
+              <ul class="sub-menu">
+                <li><a href="blog.html">Blog 1</a></li>
+                <li><a href="blog-2.html">Blog 2</a></li>
+                <li><a href="blog-3.html">Blog 3</a></li>
+              </ul><!-- /.sub-menu -->
+            </li><!-- /.dropdown -->
+            <li><a href="single.html">Single</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown"><a href="#">Category <i class="fa fa-caret-down"></i></a>
+              <ul class="sub-menu">
+                <li><a href="category-1.html">Category 1</a></li>
+                <li><a href="category-2.html">Category 2</a></li>
+                <li><a href="#">More <i class="fa fa-caret-right"></i></a>
+                  <ul class="sub-menu-2">
+                    <li><a href="#">Demo Link 1</a></li>
+                    <li><a href="#">Demo Link 2</a></li>
+
+                    <li><a href="#">More <i class="fa fa-caret-right"></i></a>
+                      <ul class="sub-menu-3">
+                        <li><a href="#">Demo Link 1</a></li>
+                        <li><a href="#">Demo Link 2</a></li>
+                        <li><a href="#">Demo Link 3</a></li>
+                      </ul><!-- /.sub-menu-3 -->
+                    </li>
+                    <li><a href="#">Demo Link 3</a></li>
+                  </ul><!-- /.sub-menu-2 -->
+                </li>
+              </ul><!-- /.sub-menu -->
+            </li><!--  /.dropdown -->
+            <li><a href="404.html">404</a></li>
+          </ul> <!-- /  .nav -->
+        </div><!-- /  .collapse .navbar-collapse  -->
+
+        <div id="currentTime" class="pull-right current-time">
+          <i class="fa fa-clock-o"></i> 12:10 pm
+
+
+        </div><!-- / #currentTime -->
+
+      </div>	<!-- /.container -->
+    </nav> <!-- /.main-menu -->
+  </section> <!-- / #ccr-nav-main -->
+
+
+  <section id="ccr-nav-below-main">
+    <nav class="second-menu">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-below-main">
+            <i class="fa fa-bars"></i>
+          </button> <!-- /.navbar-toggle -->
+        </div> <!-- / .navbar-header -->
+
+        <div class="collapse navbar-collapse ccr-nav-below-main">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Europe</a></li>
+            <li><a href="#">USA</a></li>
+            <li><a href="#">Middle East</a></li>
+            <li><a href="#">Social and IT</a></li>
+            <li><a href="#">Culture</a></li>
+          </ul> <!-- /.nav /.navbar-nav -->
+        </div>
+
+        <div class="ccr-language">
+          <ul>
+            <li>Language:</li>
+            <li><a href="#"><img src="<%= image_path("uk.png") %>" alt="UK">English</a></li>
+            <li><a href="#"><img src="<%= image_path("france.png") %>" alt="France">France</a></li><li>
+            <a href="#"><img src="<%= image_path("garman.png") %>" alt="Garman">Garman</a></li>
+          </ul>
+        </div> <!-- /.ccr-language -->
+      </div><!-- /.container -->
+    </nav><!-- /.second-menu -->
+  </section><!-- / #ccr-nav-below-main -->
+
+</header> <!-- /#ccr-header -->
+
 <h1>Listing articles</h1>
 
 <table>
@@ -31,3 +151,130 @@
 <br>
 
 <%= link_to 'New Article', new_article_path %>
+
+<section id="ccr-sidebar-newslater">
+
+  <div class="ccr-gallery-ttile">
+    <span></span>
+    <p><label for="sb-newslater"><strong>Newslater</strong></label></p>
+  </div> <!-- .ccr-gallery-ttile -->
+
+  <div class="sidebar-newslater-form">
+    <form class="ccr-gallery-ttile" action="#">
+      <input type="email" id="sb-newslater" name="sb-newslater" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+
+    </form>
+  </div> <!-- /.sidebar-newslater-form -->
+
+</section> <!-- /#ccr-sidebar-newslater -->
+
+<section id="ccr-find-on-fb">
+  <div class="find-fb-title">
+    <span><i class="fa fa-facebook"></i></span> Find us on Facebook
+  </div> <!-- /.find-fb-title -->
+  <div class="find-on-fb-body">
+
+    <div class="fb-like-box" data-href="https://www.facebook.com/codexcoderltd/" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+
+  </div> <!-- /.find-on-fb-body -->
+</section> <!-- /#ccr-find-on-fb -->
+
+
+</aside><!-- / .col-md-4  / #ccr-right-section -->
+
+
+</div><!-- /.container -->
+</section><!-- / #ccr-main-section -->
+
+<aside id="ccr-footer-sidebar">
+  <div class="container">
+
+    <ul>
+      <li class="col-md-3">
+        <h5>About Us</h5>
+        <div class="about-us">
+          SV Khoa CNTT - Trường Đại học Hà Nội
+        </div>
+        <div class="site-logo">
+          <a href="http://fit.hanu.edu.vn/fitportal/"><img src="<%= image_path("logo.png") %>" alt="Side Logo" /></a>
+        </div> <!-- / .navbar-header -->
+
+      </li>
+      <li class="col-md-3">
+        <h5>Popular Post</h5>
+        <ul>
+          <li>
+            <img src="<%= image_path("thumbnail-small-1.jpg") %>" alt="Avatar">
+            <a href="#">Lorem Ipsum is a samply dummy text of Popular Post</a>
+          </li>
+          <li>
+            <img src="<%= image_path("sports-thumb-4.jpg") %>" alt="Avatar">
+            <a href="#">Lorem Ipsum is a samply dummy text of Popular Post</a>
+          </li>
+        </ul>
+
+      </li>
+      <li class="col-md-3">
+        <h5>Recent Post</h5>
+        <ul>
+          <li>
+            <img src="<%= image_path("thumbnail-small-8.jpg") %>" alt="Avatar">
+            <a href="#">Lorem Ipsum is a samply dummy text of Recent Post</a>
+          </li>
+          <li>
+            <img src="<%= image_path("sports-thumb-6.jpg") %>" alt="Avatar">
+            <a href="#">Lorem Ipsum is a samply dummy text of Recent Post</a>
+          </li>
+        </ul>
+
+      </li>
+      <li class="col-md-3">
+        <h5>Tags</h5>
+        <div class="tagcloud">
+          <a href="#">Football</a>
+          <a href="#">Games</a>
+          <a href="#">World News</a>
+          <a href="#">USA</a>
+          <a href="#">Salman</a>
+          <a href="#">Masrafi</a>
+          <a href="#">Afgan</a>
+          <a href="#">Obama</a>
+          <a href="#">t20</a>
+          <a href="#">Business</a>
+          <a href="#">Education</a>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+
+</aside> <!-- /#ccr-footer-sidebar -->
+
+
+<footer id="ccr-footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; 2014, Copyrights <a href="http://fit.hanu.edu.vn/fitportal/">2C-11 FIT-HANU</a>. All Rights Reserved
+    </div> <!-- /.copyright -->
+
+    <div class="footer-social-icons">
+      <ul>
+        <li>
+          <a href="#"  class="google-plus"><i class="fa fa-google-plus"></i></a>
+        </li>
+        <li >
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li >
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li >
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </li>
+      </ul>
+
+    </div><!--  /.cocial-icons -->
+
+  </div> <!-- /.container -->
+</footer>  <!-- /#ccr-footer -->

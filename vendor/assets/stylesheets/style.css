@@ -892,7 +892,6 @@ line-height: 40px;
 	background-image: url(../assets/footer-sidebar-bg.png);
 	padding: 0 0 40px 0;
 	width: 100%;
-	min-height:400px;
 }
 #ccr-footer-sidebar h5{
 	font-size: 1.15em;
@@ -932,11 +931,9 @@ line-height: 40px;
 	color: #333333;
 }
 #ccr-footer-sidebar .site-logo img{
-	width: 55px;
-	height: 40px;
-	margin: 0px;
-	padding: 0px;
-	padding-right:10px;
+
+    margin-top: -5px;
+	padding: 0px 0px 0px 0px;
 	float: left;
 }
 #ccr-footer-sidebar .col-md-3{
