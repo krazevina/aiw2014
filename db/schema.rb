@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141111172523) do
+ActiveRecord::Schema.define(version: 20141123150814) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -54,6 +54,27 @@ ActiveRecord::Schema.define(version: 20141111172523) do
     t.datetime "updated_at"
     t.string   "excerpt"
     t.string   "location"
+  end
+
+  create_table "artists", force: true do |t|
+    t.string   "name"
+    t.datetime "born"
+    t.datetime "died"
+    t.string   "nationality"
+    t.string   "field"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paintings", force: true do |t|
+    t.string   "name"
+    t.string   "artist"
+    t.datetime "year"
+    t.string   "material"
+    t.string   "genre"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
