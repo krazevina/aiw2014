@@ -1,4 +1,4 @@
-ActiveAdmin.register MyModel do
+ActiveAdmin.register Artist do
 
 
   # See permitted parameters documentation:
