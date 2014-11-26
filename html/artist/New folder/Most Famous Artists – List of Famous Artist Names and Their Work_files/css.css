@@ -1,0 +1,12 @@
+@font-face {
+	font-family: Vollkorn;
+	src: local("Vollkorn Regular"), local("Vollkorn-Regular"), url(http://fonts.gstatic.com/s/vollkorn/v6/BCFBp4rt5gxxFrX6F12DKvesZW2xOQ-xsNqO47m55DA.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Vollkorn;
+	src: local("Vollkorn Italic"), local("Vollkorn-Italic"), url(http://fonts.gstatic.com/s/vollkorn/v6/Oiz0tNwvC-Nd29SBQWfWTBsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
+	font-weight: 400;
+	font-style: italic;
+}
