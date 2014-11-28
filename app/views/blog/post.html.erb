@@ -1,5 +1,5 @@
-<h1>Article#post</h1>
-<p>Find me in app/views/article/post.html.erb</p>
+<h1>Blog#post</h1>
+<p>Find me in app/views/blog/post.html.erb</p>
 <div class="row">
   <div class="col-sm-12">
     <h1>Create a post</h1>
@@ -11,6 +11,11 @@
         <div class="form-group">
           <%= f.label :body, :col_sm => 2 %>
           <%= f.text_area :body, :style => "width:300px; height:200px; position:top" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :photo, :col_sm => 2 %>
+            <%= f.file_field :photo %>
         </div>
 
         <div class="col-sm-offset-2 col-sm-4 pull-left">

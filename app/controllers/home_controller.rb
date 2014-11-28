@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
+    @posts = Post.all
+    end
   end
 
   def categories
@@ -15,6 +17,6 @@ class HomeController < ApplicationController
   end
 
   def sample
-    @hello = "World"
-  end
+
+
 end

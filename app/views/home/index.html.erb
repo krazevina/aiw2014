@@ -1,2 +1,82 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<header id="ccr-header">
+  <section id="ccr-nav-top" class="fullwidth">
+    <div class="">
+      <div class="container">
+<br/><br/><br/><br/>
+        <nav class="top-menu">
+
+
+          <ul class="right-top-menu pull-right">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Subscribe</a></li>
+            <li>
+              <form class="form-inline" role="form" action="#">
+                <input type="search" placeholder="Search here..." required>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+          </ul> <!--  /.right-top-menu -->
+        </nav> <!-- /.top-menu -->
+
+
+      </div>
+
+    </div>
+  </section> <!--  /#ccr-nav-top  -->
+
+  <section id="ccr-nav-main">
+
+  </section> <!-- / #ccr-nav-main -->
+<section id="logo">
+  <div class="logo-abc">
+    <a href="index.html"><img src="<%= image_path("logo.jpg") %>" alt="Side Logo" /></a>
+    <div/>
+
+</section>
+
+  <section id="ccr-nav-below-main">
+    <nav class="second-menu">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-below-main">
+            <i class="fa fa-bars"></i>
+          </button> <!-- /.navbar-toggle -->
+        </div> <!-- / .navbar-header -->
+
+        <div class="collapse navbar-collapse ccr-nav-below-main">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Famous Painting</a></li>
+            <li><a href="#">Famous Artist</a></li>
+            <li><a href="#">Art History</a></li>
+
+          </ul> <!-- /.nav /.navbar-nav -->
+        </div>
+
+
+      </div><!-- /.container -->
+    </nav><!-- /.second-menu -->
+  </section><!-- / #ccr-nav-below-main -->
+
+</header> <!-- /#ccr-header -->
+<br/><br/>
+<br/>
+<h1>Your posts</h1>
+
+<% @posts.each do |item| %>
+    <h5><strong><%= item.title %></strong></h5>
+
+    <%= image_tag item.photo.url, :style => "width:180px" %>
+
+    <h6><em>Posted at <%= item.created_at %></em></h6>
+    <br />
+    <%= item.body %>
+
+    <br />
+
+    <%= link_to "[Delete]", blog_destroy_path(item.id), method: :delete, data: {confirm: "Are you sure?"} %>
+
+    <hr />
+<% end %>

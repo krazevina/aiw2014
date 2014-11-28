@@ -32,7 +32,7 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 
 gem 'tzinfo-data'
-
+gem 'carrierwave'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

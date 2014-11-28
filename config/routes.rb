@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'blog/post'
+
+  post 'blog', to: 'blog#create', as: 'blog_create'
+
+  delete 'blog/:id', to: 'blog#destroy', as: 'blog_destroy'
+
+  get 'painting/painting'
+
   get 'article/post'
 
   resources :articles
@@ -11,6 +19,8 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
+
+  post 'blog', to: 'blog#create', as: "blog_create_path"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
