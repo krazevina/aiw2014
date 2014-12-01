@@ -1,82 +1,109 @@
-<header id="ccr-header">
-  <section id="ccr-nav-top" class="fullwidth">
-    <div class="">
-      <div class="container">
-<br/><br/><br/><br/>
-        <nav class="top-menu">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
 
+  <title>Bức họa nổi tiếng &#8211; Danh sách những bức tranh nổi tiếng thế giới</title>
 
-          <ul class="right-top-menu pull-right">
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Subscribe</a></li>
-            <li>
-              <form class="form-inline" role="form" action="#">
-                <input type="search" placeholder="Search here..." required>
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
-            </li>
-          </ul> <!--  /.right-top-menu -->
-        </nav> <!-- /.top-menu -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  <meta name="description" content="" />
+</head>
+<body>
 
+<div id="wrap">
 
+  <div id="header">
+    <div class="wrap">
+      <div id="logo">
+
+        <a href="index.html"><img src="<%= image_path("banner.jpg") %>" alt="Side Logo" /></a>
       </div>
-
+      <div class="searchform">
+        <form class="searchform" action="#" id="cse-search-box">
+          <input type="text" name="q" class="s" value="Tìm kiếm từ khóa" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+          <input type="hidden" name="cx" value="partner-pub-0956577070291964:9991229555" />
+          <input type="hidden" name="cof" value="FORID:10" />
+          <input type="hidden" name="ie" value="UTF-8" />
+        </form>            </div>
     </div>
-  </section> <!--  /#ccr-nav-top  -->
+  </div>
+  <div id="nav">
+    <ul class="nav superfish">
+      <li class="page_item page-item-136 current_page_ancestor current_page_parent"><a href="index.html">Bức Họa Nổi Tiếng</a></li>
+      <li class="page_item page-item-95"><a href="artist.html">Họa Sĩ Nổi Tiếng</a></li>
+      <li class="page_item page-item-100"><a href="history.html">Lịch Sử Hội Họa Thế Giới</a></li>
+    </ul>
+  </div>
+  <div id="inner">
+    <div id="content-sidebar-wrap">
+      <div id="content" class="hfeed">
+        <h2>Những bức họa nổi tiếng</h2>
+        <div class="entry">
 
-  <section id="ccr-nav-main">
+          <p></p>
+          <h5><span style="color: #800000;">Theo thứ tự thời gian</span></h5>
+          <p><p style="text-align: center;"><strong>Thời kỳ Phục Hưng</strong></p>
+          <h1>Your posts</h1>
 
-  </section> <!-- / #ccr-nav-main -->
-<section id="logo">
-  <div class="logo-abc">
-    <a href="index.html"><img src="<%= image_path("banner.jpg") %>" alt="Side Logo" /></a>
-    </div>
+          <% @posts.each do |item| %>
+              <h5><strong><%= item.title %></strong></h5>
 
-</section>
+              <%= image_tag item.photo.url, :style => "width:180px" %>
 
-  <section id="ccr-nav-below-main">
-    <nav class="second-menu">
-      <div class="container">
+              <h6><em>Posted at <%= item.created_at %></em></h6>
+              <br />
+              <%= item.body %>
 
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ccr-nav-below-main">
-            <i class="fa fa-bars"></i>
-          </button> <!-- /.navbar-toggle -->
-        </div> <!-- / .navbar-header -->
+              <br />
 
-        <div class="collapse navbar-collapse ccr-nav-below-main">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Famous Painting</a></li>
-            <li><a href="#">Famous Artist</a></li>
-            <li><a href="#">Art History</a></li>
+              <%= link_to "[Delete]", blog_destroy_path(item.id), method: :delete, data: {confirm: "Are you sure?"} %>
 
-          </ul> <!-- /.nav /.navbar-nav -->
+              <hr />
+          <% end %>
         </div>
+        <div id="sidebar" class="sidebar widget-area">
+          <div class="widget-wrap">
+            <li id="recent-posts-3" class="widget widget_recent_entries">		<h4 class="widgettitle">Được xem nhiều nhất</h4>		<ul>
+              <li>
+                <a href="#">Victor Ortiz</a>
+              </li>
+              <li>
+                <a href="#">Julio Cesar Chavez, Jr.</a>
+              </li>
+              <li>
+                <a href="#">Timothy Bradley</a>
+              </li>
+              <li>
+                <a href="#">Manny Pacquiao</a>
+              </li>
+              <li>
+                <a href="#">Floyd Mayweather, Jr.</a>
+              </li>
+            </ul>
+            </li>
+            <li id="execphp-3" class="widget widget_execphp">			<div class="execphpwidget"><center>
 
+            </center></div>
+            </li>
+          </div>
+        </div>    </div>
+    </div>
 
-      </div><!-- /.container -->
-    </nav><!-- /.second-menu -->
-  </section><!-- / #ccr-nav-below-main -->
-
-</header> <!-- /#ccr-header -->
 <br/><br/>
 <br/>
-<h1>Your posts</h1>
 
-<% @posts.each do |item| %>
-    <h5><strong><%= item.title %></strong></h5>
+      </div>
+  <div id="footer">
+    <div class="wrap">
+      <div class="creds">
+        <p> Bản quyền &copy; 2014 &#xb7; FIT-HANU &#xb7; Mọi quyền được bảo vệ. | <a rel="nofollow" href="#">Điều khoản sử dụng</a> | <a rel="nofollow"  href="contact.htm"> Liên hệ với chúng tôi</a></p>
+      </div>
+    </div>
+  </div>
+  <a id="scroll-to-top" href="#" title="Scroll to Top">Top</a>
+  <script type='text/javascript' src='#'></script>
+  <script type='text/javascript' src='#'></script>
 
-    <%= image_tag item.photo.url, :style => "width:180px" %>
 
-    <h6><em>Posted at <%= item.created_at %></em></h6>
-    <br />
-    <%= item.body %>
-
-    <br />
-
-    <%= link_to "[Delete]", blog_destroy_path(item.id), method: :delete, data: {confirm: "Are you sure?"} %>
-
-    <hr />
-<% end %>
+</div>
+</body></html>
