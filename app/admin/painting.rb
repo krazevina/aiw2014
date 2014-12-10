@@ -1,5 +1,6 @@
 ActiveAdmin.register Painting do
-
+  permit_params :name, :year, :material, :genre, :location
+  belongs_to :artist
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

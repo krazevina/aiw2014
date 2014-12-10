@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126145749) do
+ActiveRecord::Schema.define(version: 20141209033724) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -66,16 +66,30 @@ ActiveRecord::Schema.define(version: 20141126145749) do
     t.datetime "updated_at"
   end
 
-  create_table "paintings", force: true do |t|
-    t.string   "name"
+  create_table "demos", force: true do |t|
+    t.string   "title"
     t.string   "artist"
-    t.datetime "year"
+    t.text     "body"
+    t.string   "photo"
     t.string   "material"
     t.string   "genre"
     t.string   "location"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "paintings", force: true do |t|
+    t.string   "name"
+    t.datetime "year"
+    t.string   "material"
+    t.string   "genre"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "artist_id"
+  end
+
+  add_index "paintings", ["artist_id"], name: "index_paintings_on_artist_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.string   "title"

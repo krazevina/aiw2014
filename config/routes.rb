@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
+
+  get 'static_pages/history'
+
+  get 'static_pages/about'
+
+  get 'static_pages/contact'
+
   get 'blog/post'
 
   post 'blog', to: 'blog#create', as: 'blog_create'
-
+  post 'demo', to: 'demo#create', as: 'demo_create'
   delete 'blog/:id', to: 'blog#destroy', as: 'blog_destroy'
+
+  get 'demo' => 'demo#post'
 
   get 'painting/painting'
 
@@ -21,6 +30,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   post 'blog', to: 'blog#create', as: "blog_create_path"
+  post 'demo', to: 'demo#create', as: "demo_create_path"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
