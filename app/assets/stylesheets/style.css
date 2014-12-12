@@ -82,6 +82,7 @@ a:hover {
 }
 
 a img {
+margin-top: -11px;
 	border: none;
 }
 
@@ -106,7 +107,8 @@ body {
 /* Wrap
 ------------------------------------------------------------ */
 #wrap {
-	margin: 0 auto;
+	margin-top: 2px;
+	margin-left: 100px;
 	padding: 0;
 	width:960px;
 	margin-bottom:10px;
@@ -116,9 +118,17 @@ body {
 /* Header
 ------------------------------------------------------------ */
 #header {
-	margin: auto;
+	margin-top:15px;
 	width: 960px;
-	height:80px;
+	height:108px;
+    background: #dfdfdf;
+    border-bottom: none;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 0 15px #AAAAAA;
+    -moz-box-shadow: 0 0 15px #AAAAAA;
+    box-shadow: 0 0 15px #AAAAAA;
+	
+	
 }
 
 #logo {
@@ -200,22 +210,27 @@ body {
 
 
 /* Content-Sidebar Wrap
------------------------------------------------------------- */
-#content-sidebar-wrap {
-	background: #fff;
-	/*box-shadow:  0px 0px 8px 0px rgba(0, 0, 0, 0.15);*/
-	float: left;
-	width: 938px;
-	padding:10px;
-	border: 1px solid #C19D7D;
-}
+------------------------------------------	------------------ */
+
 
 
 /* Content
 ------------------------------------------------------------ */
+#rule {
+
+
+
+}
+.ruler {
+padding-left:212px;
+
+}
 #content {
 	float: right;
 	width: 728px;
+	margin-bottom: 423px;
+    margin-top: -437px;
+	
 }
 
 .post {
@@ -501,16 +516,16 @@ h5 {
 }
 
 #nav {
-border:0px solid #581010; -webkit-border-radius: 0px; -moz-border-radius: 0px;border-radius: 0px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #939855; 
+border:0px solid #581010; -webkit-border-radius: 20px; -moz-border-radius: 20px;border-radius: 20px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-shadow: 0px 0px 0 rgba(0,0,0,0.3);font-weight:bold; text-align: center; color: #FFFFFF; background-color: #8d9b9e; 
  
 
 	width: 960px;
-	height:30px;
+	height:35px;
 	font-family: Arial, Tahoma, Verdana;
-	font-size: 11px;
-	font-weight: bold;
+	font-size: 13px;
+	font-weight: lighter;
 	color: #222222;
-	margin: 0;
+	margin-top:20px;
 	padding: 0;
 	text-transform: uppercase;
 	/*overflow: hidden;*/
@@ -521,31 +536,33 @@ border:0px solid #581010; -webkit-border-radius: 0px; -moz-border-radius: 0px;bo
 	width: 100%;
 	float: left;
 	list-style: none;
-	margin: 0;
-	padding: 0;
+	margin-right:10px;
+	padding-right:10px;
 	height:30px;
+	text-align: bottom;
 	}
 	
 #nav li {
 	float: left;
 	list-style: none;
-	margin: 0;
+	margin:0;
 	padding: 0;
 }
 	
 #nav li a {
 	color: #fff;
 	display: block;
-    margin: 0;
-	padding: 5px 15px 5px 15px;
+    margin-right:10px;
+	padding: 11px 10px 9px 12px;
 	text-decoration: none;	
-	border-right:1px solid black;
-	height:30px;
+	border-right:0px solid black;
+	height:35px;
 }
 
 #nav li a:hover, #nav li a:active {
 	color: #fff;
-	background:#946C37;
+	background:#127189;
+	border-radius: 20px;
 }
 
 #nav li a .sf-sub-indicator {
@@ -654,9 +671,20 @@ border:0px solid #581010; -webkit-border-radius: 0px; -moz-border-radius: 0px;bo
 /* Images
 ------------------------------------------------------------ */
 img {
+    padding-top:10px;
 	height: auto;
 	max-width: 100%;
+	margin-top:10px;
+	
 }
+img.pic{
+margin-left:100px;
+}
+#pic.cip{
+margin-top:100px;
+
+}
+
 
 .avatar {
 	background-color: #f5f5f5;
@@ -824,16 +852,13 @@ p.wp-caption-text {
 	width: 200px;
 	list-style-type:none;
 	font-family: georgia, "times new roman", times, serif;
+	margin-left:-221px;
 }
 
 .sidebar .widget {
-	background-color: #f8f8f8;
-	border-bottom: 1px solid #C19D7D;
-	border-left: 1px solid #C19D7D;
-	border-right: 1px solid #C19D7D;
-	border-top: 3px solid #946B37;
-	margin: 0 0 10px;
-	padding: 10px;
+	
+	
+	padding: 14px;
 }
 
 .sidebar.widget-area ol ol,
@@ -865,7 +890,9 @@ p.wp-caption-text {
 #header .searchform {
 	float: right;
 	padding: 0;
-	margin-top:8px;
+	margin-top:18px;
+	margin-left:104px;
+
 }
 
 .s {
@@ -935,11 +962,7 @@ p.wp-caption-text {
 /* Footer
 ------------------------------------------------------------ */
 #footer {
-	background-color: #fff;
-	border-top: 3px solid #946B37;
-	border-bottom: 1px solid #C19D7D;
-	border-left: 1px solid #C19D7D;
-	border-right: 1px solid #C19D7D;
+	
 	clear: both;
 	font-size: 12px;
 	margin: 0 auto;
@@ -967,16 +990,18 @@ p.wp-caption-text {
 }
 
 #footer .gototop {
+    
 	float: left;
 	width: 200px;
 }
 
 #footer .creds {
-	float: right;
-	text-align: right;
+	
+	text-align: center;
 	width: 940px;
 	padding:10px;
 }
+
 
 
 /* Comments
@@ -1308,10 +1333,17 @@ div.gform_wrapper .gform_button {
 }
 
 /*3 Columns Table td Style*/
-table {
-	margin-bottom:10px;
+table.tranhnt td{
+    height: 276px;
 	
-	border-collapse: collapse;
+    text-align: center;
+   vertical-align: text-top;
+	
+}
+table.tranhnt div{
+width: 205px;
+border: 1px solid #CCCCCC;
+margin-right:10px;
 }
 
 th.headpart {
